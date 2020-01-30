@@ -5,8 +5,8 @@ class cryptoWallet {
   constructor(){
     this.network = qtumjsWallet.networks.testnet;
     this.mnemonic = qtumjsWallet.generateMnemonic();
-    this.bank = this.network.fromWIF('cNkhHVdZrmo5vFw1eQCZovi56JDR9AMrwyEJFDGnUgLgkKkWGBxP');
-    this.wallet = this.network.fromWIF('cVWMd7m58SKF6ekxoE79iR6y6Fed6GWkCeAMXxb8dewD3DycY2ye');
+    this.bank = this.network.fromWIF('');
+    this.wallet = this.network.fromWIF('');
   };
 
   // createNewWallet(){
@@ -31,9 +31,9 @@ class cryptoWallet {
   // }
 
   async send() {
-    const contractAddress = '37c17869b941a88382d93fba5f6706dd5861ff66';
+    const contractAddress = '';
     // ABI encoded data for the send-to-method transaction
-    const encodedData = "03372e57";
+    const encodedData = "";
 
     const tx = await this.wallet.contractSend(contractAddress, encodedData, {
       amount: 0.05 * 1e8,
